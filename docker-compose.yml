@@ -1,0 +1,20 @@
+version: '3'
+services:
+
+  server:
+    image: apache2
+    container_name: apache2
+    ports:
+      - 8080:80
+    networks:
+      - link        
+    volumes:
+      - ./www:/var/www/html
+
+    # command: ["/bin/bash","-c","/home/link/loop.sh"]      
+# ------------------------------------------------------------
+
+  
+networks:
+  link:
+    driver: bridge      
