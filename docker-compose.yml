@@ -2,10 +2,10 @@ version: '3'
 services:
 
   server:
-    image: apache2
+    image: taothong/web:1.0
     container_name: apache2
     ports:
-      - 8080:80
+      - 80:80
     networks:
       - link        
     volumes:
