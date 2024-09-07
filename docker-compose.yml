@@ -2,7 +2,10 @@ version: '3'
 services:
 
   server:
-    image: taothong/web:1.0
+    # image: taothong/web:1.0
+    build:
+      context: .
+      dockerfile: dev/Dockerfile      
     container_name: apache2
     ports:
       - 80:80
